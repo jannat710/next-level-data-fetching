@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./Posts.module.css"
 
 
 const PostsPage = async() => {
@@ -10,7 +11,7 @@ const PostsPage = async() => {
     // console.log(posts)
     return (
         <div className="w-full">
-            <h1 className="text-2xl">Total Posts:{posts.length}</h1>
+            <h1 className={styles.header_text}>Total Posts:{posts.length}</h1>
             {
                 posts.map(post=>(<div key={post.id} className="card bg-gray-100 my-5 shadow-xl w-[70%] mx-auto">
                 <div className="card-body">
